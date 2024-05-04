@@ -1,27 +1,80 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
 header {
     width: 100%;
-    height: 30%;
-
+    height: 20%;
     display: flex;
     flex-direction: row;
-    background-color: gray;
+    background: linear-gradient(to right, #343741, #948c97);
     align-items: center;
-
 }
 
-
-.logo {
-    width: 5%;
-    height: 5%;
-    margin-left: 20px;
+.headerStart  {
+    width: 10%;
+    height: 100%;
 }
 
-.menu_options {
-    width: 500px;
-    color: #e3b062;
+.headerStart img{
+    width: 100px;
+    height: 100px;
+}
+
+.headerMiddle{
+    width: 70%;
+    height: 100%;
+}
+
+.menuOptions {
+    width: 100%;
+    color: #d4ba9d;
     list-style: none;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: center;                                                                                                       
 }
-                                                                                                                                                                                                                                                            
+
+.headerEnd{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnLogin{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #8d1216;
+    width: 50%;
+    height: 40px;
+    border-radius: 10px;
+    color: #d4ba9d;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+
+.phrases{
+    background-image: url("/imagens/cartas3.png"); /* Adjusted image path */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    color: #d4ba9d;
+}
+
+footer{
+    width: 100%;
+}
