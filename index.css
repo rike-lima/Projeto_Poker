@@ -65,20 +65,55 @@ main{
 section {
     height: 76vh;
     width: 100%;
-    border: 1px solid black;
+
 }   
 
  .home{
     height:100%;
-    width: 100%;
-   background-image: url(/imagens/cartas1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
+    background-image: url(/imagens/cards-chips-poker-wallpaper-4469.jpg);
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-size: cover;
+     color:#d4ba9d;
+     display: flex;
+     flex-direction: row-reverse;
+     width: 100%;
+       
 
 }
 
-footer{
-    width: 100%;
+.frase{
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    width: 20%;
+    font-size: 30px;
+    padding-bottom: 300px;
+    padding-right: 50px;
+}
+
+.segunda   {
+    background-color: #d4ba9d;
+}
+
+.segundaContent{
+        padding: 150px;
+}
+
+.segunda img{
+    float: right;   
+    margin-left: 10%;
+    border-radius: 20px;
+}
+
+.segundaTexto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.terceira{
+    background: linear-gradient(to right, #343741, #948c97);
 }
