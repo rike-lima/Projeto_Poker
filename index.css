@@ -1,13 +1,11 @@
 body {
-    margin: 0;
-    padding: 0;
+   margin: 0;
     width: 100%;
     height: 100%;
 }
 
 header {
-    width: 100%;
-    height: 20%;
+    width: 100%;    
     display: flex;
     flex-direction: row;
     background: linear-gradient(to right, #343741, #948c97);
@@ -58,21 +56,27 @@ header {
     border-radius: 10px;
     color: #d4ba9d;
 }
-
-.content{
+main{
     display: flex;
     flex-direction: column;
-    height: 100vh;
     width: 100%;
-}
-
-.phrases{
-    background-image: url("/imagens/cartas3.png"); /* Adjusted image path */
-    background-size: cover;
-    background-position: center;
     height: 100%;
+   }
+section {
+    height: 76vh;
     width: 100%;
-    color: #d4ba9d;
+    border: 1px solid black;
+}   
+
+ .home{
+    height:100%;
+    width: 100%;
+   background-image: url(/imagens/cartas1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
 }
 
 footer{
