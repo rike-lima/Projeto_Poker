@@ -9,36 +9,35 @@ html {
     height: 450vh;
 }
 
-
-.containerMenu {
-    max-width: 1600px;
-    margin: auto;
-
-
+#topMenu {
+    width: 100%;
+    padding: 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
-.menuContent img {
+
+#topMenu .menuContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin: auto;
+}
+
+
+#topMenu .menuContent.active {
+    backdrop-filter: blur(4px);
+    box-shadow: 0 2px 8px 0 black;
+}
+
+#topMenu .menuContent img {
     width: 100px;
     height: 80px;
 }
 
-.menuContent {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-header {
-    width: 100%;
-    padding: 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-
-
-}
-
-header ul {
+#topMenu ul {
     list-style: none;
 }
 
