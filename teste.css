@@ -107,7 +107,14 @@ section{
 
     .banner2{
     
-        background-image: url(/imagens/cartas1.jpg);
+        background-image: url(/imagens/Design\ sem\ nome\ \(1\).png);
+        height: 90vh;
+        
+     }
+
+     .banner3{
+    
+        background-image: url(/imagens/Design\ sem\ nome.png);
         height: 90vh;
         
      }
