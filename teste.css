@@ -41,13 +41,13 @@ html {
     list-style: none;
 }
 
-a{
-    color:  orange;
-    text-decoration: none;
+#topMenu a{
+    color:  white;
+    text-decoration: none;   
 }
 
 section{
-    height: 300px;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -80,14 +80,27 @@ section{
 }
 
 .sectionPoker{
-   background-color: orange;
+  background-color:grey ;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
    
 }
 
-.sectionPoker span{
+/* .sectionPoker span{
     color: white;
     font-size: 30px;
     font-family: 'Times New Roman', Times, serif;
+} */
+
+.contentPoker{
+    width: 600px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 
@@ -102,7 +115,7 @@ section{
     color: #d4ba9d;}
 
     h2{
-        color: white;
+        color: white;                                                                                                                                                                                                                                         ;
     }
 
     .banner2{
@@ -117,4 +130,16 @@ section{
         background-image: url(/imagens/Design\ sem\ nome.png);
         height: 90vh;
         
-     }
+     }    
+     
+     .sectionCommunit{
+        background-color: grey ;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-around;
+         align-items: center;
+         height: 50vh;
+         
+      }
+
+      
