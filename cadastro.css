@@ -21,8 +21,7 @@
 
 .container {
 height: 100vh;
-width: 100vw;
-border: solid red;
+width: 100VW;
 background-size: 100%;
 display: flex;
 flex-direction: row;
@@ -36,34 +35,24 @@ background-position: center;
 
 
  .boxLogin{
-     height: 70%;
-     width:40%;
-     display: flex;  
-     align-items: center;
-     justify-content: space-around;
-     flex-direction: column;
-     border-radius: 50px;
-     color: white;
-     font-size: 40px;
+    display: flex;  
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 80%;
+    width:60%;
     background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8));
-    gap: 20px;
-    padding-bottom: 30px;   
+    border-radius: 10px;
+    color: white;
+    font-size: 30px;
+   
 } 
 
-.boxLogin a{
-    text-decoration: none;
-}
-
-
 .boxLogin .icon{
-    font-size: 80px;
-    text-decoration: none;
+    font-size: 50px;
 }
 
-.boxLogin input{
-   width: 200px;
-   height: 30px;
-}
+
 
 .more{display: flex;
     flex-direction: column;
@@ -74,4 +63,5 @@ background-position: center;
     height: 40px;
     border-radius: 10px;
     color: #d4ba9d;
+opacity: 1;
 }
