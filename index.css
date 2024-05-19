@@ -133,16 +133,29 @@ section {
     background-image: url(/imagens/banner2.png);
     height: 80vh;
     background-size: cover;
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+ 
    
 }
 
 .banner2content{
-    
     height: 100%;
     width: 100%;
-    padding: 30px;
+    /* padding: 30px; */
     border: solid red;
     color: blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.habilidade1{
+    width:20% ;
+    height: 100%;
+    border: solid blue;
+    
 }
 
 
