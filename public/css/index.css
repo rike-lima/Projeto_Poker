@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* html {
+    height: 450vh;
+} */
+
+#topMenu {
+  width: 100%;
+  padding: 0px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#topMenu .menuContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin: auto;
+}
+
+#topMenu .menuContent.active {
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 8px 0 black;
+}
+
+#topMenu .menuContent img {
+  width: 120px;
+  height: 100px;
+  margin-top: 15px;
+}
+
+#topMenu ul {
+  list-style: none;
+}
+
+#topMenu a {
+  color: white;
+  text-decoration: none;
+}
+
+section {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.menuOptions {
+  width: 1000px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* Banner com frase de impacto no poker  */
+.banner1 {
+  height: 90vh;
+  background-image: url(/imagens/banner1.png);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+}
+
+.banner1content {
+  padding: 50px;
+  height: 100px;
+  width: 400px;
+  color: white;
+  font-size: 30px;
+}
+
+/* parte da explicação do jogo, com link para página complementar, explicar no complemento como se joga */
+.sectionPoker {
+  background-image: url(/imagens/FundoPolvo.png);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  gap: 50px;
+  padding: 50px;
+  background-size: cover;
+}
+
+.sectionPoker h2 {
+  color: #e86816;
+}
+
+.contentPoker {
+  color: #e86816;
+  font-size: 25px;
+  font-family: "Times New Roman", Times, serif;
+  width: 1200px;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.more {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #8d1216;
+  width: 150px;
+  height: 40px;
+  border-radius: 10px;
+  color: #d4ba9d;
+}
+
+/* Banner 2 vai tratar de algumas hasbilidades trabalhdas com o poker */
+.banner2 {
+  background-image: url(/imagens/banner2.png);
+  height: 90vh;
+  background-size: cover;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
+  background-attachment: local;
+}
+.titulos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 10%;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    color: #e86816;
+}
+
+.subTitulos  {
+    
+    padding: 0;
+    margin: 0;
+    display: flex;     
+    align-items: center;
+    gap: 50px;
+    color: #e86816;
+    font-weight: bolder;
+}
+
+
+.banner2content {
+  height: 100%;
+  width: 100%;
+  margin-top: 10px;
+  /* border: solid red; */
+  color: blue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/* Colunas que guardarão as fichas ou círculos */
+.base {
+  width: 20%;
+  height: 87%;
+  /* border: solid blue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Divs que estçao determinando o tamanho do display de cada parte do círculo */
+.circulo1 {
+  width: 100%;
+  height: 25%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.circulo2 {
+  width: 100%;
+  height: 25%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: end;
+}
+
+/* Configuração das fichas ou círculos */
+.semiCircle {
+  width: 250px;
+  height: 250px;
+  background-color: #333; 
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 30px;
+  font-size: 50px;
+}
+
+/* Conteúdo no meio das fichas */
+.circleContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 250px;
+  padding: 40px;
+  background-color: #333;
+  /* border: solid red;   */
+  display: none;
+}
+
+/* Efeito de aparição com o mouse em cima da ficha */
+.base:hover .circleContent {
+  height: 50%;
+  display: block;
+}
+
+#habilidade1{
+    background-color: #cb0c12;
+}
+#habilidade2{
+    background-color: #0b9aa8;
+}
+#habilidade3{
+    background-color: #eeee00;
+}
+#habilidade4{
+    background-color: #069529;
+}
+
+.eventos {
+    background-image: url(/imagens/FundoPolvo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    color: #e86816;
+  }
+
+  
+.banner3 {
+  background-image: url(/imagens/graph.gif);
+  height: 90vh;
+  color: yellow;
+}
+
+.banner3content{
+    width: 50%;
+    height: 80%;
+    border: solid red;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: bolder;
+}
+
+.sectionCommunit {
+  background-color: grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 50vh;
+}
+
