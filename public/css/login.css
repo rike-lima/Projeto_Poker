@@ -10,7 +10,7 @@
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)), url("/imagens/fundo_login.jpg");
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)), url("../assets/imagens/fundo_login.jpg");
     display: flex;
     flex-direction: row;
     justify-content: center;

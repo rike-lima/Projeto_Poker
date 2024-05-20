@@ -67,7 +67,7 @@ section {
 /* Banner com frase de impacto no poker  */
 .banner1 {
   height: 90vh;
-  background-image: url(/imagens/banner1.png);
+  background-image: url(../assets/imagens/banner1.png);
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -84,7 +84,7 @@ section {
 
 /* parte da explicação do jogo, com link para página complementar, explicar no complemento como se joga */
 .sectionPoker {
-  background-image: url(/imagens/FundoPolvo.png);
+  background-image: url(../assets/imagens/FundoPolvo.png);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -124,7 +124,7 @@ section {
 
 /* Banner 2 vai tratar de algumas hasbilidades trabalhdas com o poker */
 .banner2 {
-  background-image: url(/imagens/banner2.png);
+  background-image: url(../assets/imagens/banner2.png);
   height: 90vh;
   background-size: cover;
   padding: 0px;
@@ -247,7 +247,7 @@ section {
 }
 
 .eventos {
-    background-image: url(/imagens/FundoPolvo.png);
+    background-image: url(../assets/imagens/FundoPolvo.png);
     background-repeat: no-repeat;
     background-size: cover;
     width:100%;
@@ -262,7 +262,7 @@ section {
 
   
 .banner3 {
-  background-image: url(/imagens/graph.gif);
+  background-image: url(../assets/imagens/FundoPolvo.png);
   height: 90vh;
   color: yellow;
 }
