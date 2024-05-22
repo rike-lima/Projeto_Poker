@@ -84,30 +84,37 @@ section {
 
 /* parte da explicação do jogo, com link para página complementar, explicar no complemento como se joga */
 .sectionPoker {
-  background-image: url(../assets/imagens/FundoPolvo.png);
+  background-image: url(../assets/imagens/fundoPokerSection.png);
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: flex-start;
   height: 70vh;
+  width: 100%;
   gap: 50px;
   padding: 50px;
+  padding-left: 50px;
   background-size: cover;
 }
 
 .sectionPoker h2 {
-  color: #e86816;
+  color: white;
+  text-align: center;
 }
 
 .contentPoker {
-  color: #e86816;
+  color: white;
   font-size: 25px;
   font-family: "Times New Roman", Times, serif;
-  width: 1200px;
+  width: 1000px;
   height: 800px;
+  /* border: solid red; */
   display: flex;
   flex-direction: column;
-  align-items: start;
+  justify-content: center;
+  align-items: center;
+  /* margin-left: -500px; */
 }
 
 .more {
@@ -124,159 +131,213 @@ section {
 
 /* Banner 2 vai tratar de algumas hasbilidades trabalhdas com o poker */
 .banner2 {
-  background-image: url(../assets/imagens/banner2.png);
-  height: 90vh;
+  background-image: url(../assets/imagens/fundoHabilidades.png);
   background-size: cover;
-  padding: 0px;
+  background-color: rgb(85, 85, 85);
+  background-blend-mode: overlay; 
+  height: 80vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   justify-content: space-around;
-  background-attachment: local;
 }
+
 .titulos {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 10%;
-    margin-top: 10px;
-    justify-content: center;
-    align-items: center;
-    color: #e86816;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 10%;
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
-
-.subTitulos  {
-    
-    padding: 0;
-    margin: 0;
-    display: flex;     
-    align-items: center;
-    gap: 50px;
-    color: #e86816;
-    font-weight: bolder;
-}
-
 
 .banner2content {
   height: 100%;
   width: 100%;
   margin-top: 10px;
-  /* border: solid red; */
-  color: blue;
+  color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  
 }
 
 /* Colunas que guardarão as fichas ou círculos */
-.base {
+
+.habilidade{
   width: 20%;
-  height: 87%;
-  /* border: solid blue; */
+  height: 90%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  /* border: solid red; */
+  gap: 15px;
 }
 
-/* Divs que estçao determinando o tamanho do display de cada parte do círculo */
-.circulo1 {
-  width: 100%;
-  height: 25%;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-}
-.circulo2 {
-  width: 100%;
-  height: 25%;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  text-align: end;
-}
-
-/* Configuração das fichas ou círculos */
-.semiCircle {
-  width: 250px;
-  height: 250px;
-  background-color: #333; 
-  border-radius: 50%;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 30px;
-  font-size: 50px;
-}
-
-/* Conteúdo no meio das fichas */
-.circleContent {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 50%;
-  width: 250px;
-  padding: 40px;
-  background-color: #333;
-  /* border: solid red;   */
-  display: none;
-}
-
-/* Efeito de aparição com o mouse em cima da ficha */
-.base:hover .circleContent {
-  height: 50%;
-  display: block;
-}
-
-#habilidade1{
-    background-color: #cb0c12;
-}
-#habilidade2{
-    background-color: #0b9aa8;
-}
-#habilidade3{
-    background-color: #eeee00;
-}
-#habilidade4{
-    background-color: #069529;
+.habilidade img{
+  height: 320px;
+  width: 550px;
+  margin-top: -50px;
+  margin-bottom: -50px;  
 }
 
 .eventos {
-    background-image: url(../assets/imagens/FundoPolvo.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width:100%;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 20px;
-    color: #e86816;
-  }
-
+  background-image: url(../assets/imagens/fundoEventos.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: local;
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: start;
+  padding: 5px;
+  color: #e86816;
   
-.banner3 {
-  background-image: url(../assets/imagens/FundoPolvo.png);
-  height: 90vh;
-  color: yellow;
 }
 
-.banner3content{
-    width: 50%;
-    height: 80%;
-    border: solid red;
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    font-weight: bolder;
+
+.slider {
+  margin: 0 auto;
+  max-width: 100%;
+  overflow: hidden;
+  margin-top: 0;
+}
+
+.slides {
+  width: 960px;
+  height: 580px;
+  display: flex;
+  /* border: solid blue; */
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 100%;
+  /* position: relative; */
+  transition: 1s;
+
+}
+
+.slide img {
+  width: 100%;
+
+}
+
+.manual-navigation {
+  /* position: absolute; */
+  width: 800px;
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  margin-left: 50px;
+}
+
+.manual-btn {
+  border: 2px solid #e86816;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 40px;
+}
+
+.manual-btn:hover {
+  background-color: #e86816;
+}
+
+#radio1:checked~.first {
+  margin-left: 0;
+}
+
+#radio2:checked~.first {
+  margin-left: -100%;
+}
+
+#radio3:checked~.first {
+  margin-left: -200%;
+}
+
+#radio4:checked~.first {
+  margin-left: -300%;
+}
+
+.navigation-auto div {
+  border: 2px solid yellow;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+
+
+}
+
+.navigation-auto {
+  /* position: absolute; */
+  width: 800px;
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  margin-left: 50px;
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 40px;
+
+}
+
+#radio1:checked~.navigation-auto .auto-btn1 {
+  background-color: #e86816;
+}
+
+#radio2:checked~.navigation-auto .auto-btn2 {
+  background-color: #e86816;
+}
+
+#radio3:checked~.navigation-auto .auto-btn3 {
+  background-color: #e86816;
+}
+
+#radio4:checked~.navigation-auto .auto-btn4 {
+  background-color: #e86816;
+}
+
+#imgTeste {
+  width: 960px;
+  height: 580px;
+}
+
+
+/* abaixo está em produção */
+
+.banner3 {
+  background-image: url(../assets/imagens/fundoCarta.png);
+  height: 90vh;
+  color: white;
+}
+
+.banner3content {
+  width: 50%;
+  height: 80%;
+  /* border: solid red; */
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: bolder;
 }
 
 .sectionCommunit {
@@ -287,4 +348,3 @@ section {
   align-items: center;
   height: 50vh;
 }
-
