@@ -179,7 +179,7 @@ section {
   
 }
 
-/* Colunas que guardarão as fichas ou círculos */
+
 
 .habilidade{
   width: 20%;
@@ -194,7 +194,7 @@ section {
 
 .habilidade img{
   height: 320px;
-  width: 550px;
+  width: 400px;
   margin-top: -50px;
   margin-bottom: -50px;  
 }
@@ -207,165 +207,101 @@ section {
   width: 100%;
   height: 85vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   text-align: start;
   padding: 5px;
-  color: white;
-  
+  color: white;  
 }
 
-
-.slider {
+.slider{
   margin: 0 auto;
-  max-width: 100%;
+  width: 800px;
+  height: 400px;
   overflow: hidden;
-  margin-top: 0;
 }
 
-.slides {
-  width: 960px;
-  height: 580px;
+.slides img{
+  width: 800px;
+  height: 430px;
+}
+
+/* .slides{
+  width:800px;
+  height: 400px;
   display: flex;
-  /* border: solid blue; */
-}
+} */
 
-.slides input {
+.slides input{
   display: none;
 }
 
-.slide {
-  width: 100%;
-  /* position: relative; */
-  transition: 1s;
+.slide{
+  width: 25%;
+  position: relative;
 
 }
 
-.slide img {
-  width: 100%;
-
-}
-
-.manual-navigation {
-  /* position: absolute; */
-  width: 800px;
-  margin-top: 35px;
+.manual-navigation{
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  /* margin-top: -40px; */
   display: flex;
   justify-content: center;
-  margin-left: 50px;
 }
-
-.manual-btn {
+.manual-btn{  
   border: 2px solid #e86816;
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;
   transition: 1s;
-
 }
 
-.manual-btn:not(:last-child) {
+.manual-btn:not(:last-child){
   margin-right: 40px;
 }
 
-.manual-btn:hover {
-  background-color: #e86816;
+.manual-btn:hover{
+  background-color: black;
 }
 
-#radio1:checked~.first {
+#radio1:checked~.first{
   margin-left: 0;
-}
+  }
 
-#radio2:checked~.first {
-  margin-left: -100%;
-}
-
-#radio3:checked~.first {
-  margin-left: -200%;
-}
-
-#radio4:checked~.first {
-  margin-left: -300%;
-}
-
-.navigation-auto div {
-  border: 2px solid yellow;
-  padding: 5px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 1s;
-
-
-}
-
-.navigation-auto {
-  /* position: absolute; */
-  width: 800px;
-  margin-top: 35px;
-  display: flex;
-  justify-content: center;
-  margin-left: 50px;
-}
-
-.navigation-auto div:not(:last-child) {
-  margin-right: 40px;
-
-}
-
-#radio1:checked~.navigation-auto .auto-btn1 {
-  background-color: #e86816;
-}
-
-#radio2:checked~.navigation-auto .auto-btn2 {
-  background-color: #e86816;
-}
-
-#radio3:checked~.navigation-auto .auto-btn3 {
-  background-color: #e86816;
-}
-
-#radio4:checked~.navigation-auto .auto-btn4 {
-  background-color: #e86816;
-}
-
-#imgTeste {
-  width: 960px;
-  height: 580px;
-}
-
+  #radio2:checked~.first{
+    margin-left: 50%;
+    }
 
 /* abaixo está em produção */
 
 .banner3 {
-  background-image: url(../assets/imagens/fundoCarta.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: local;
+  
   height: 90vh;
   color: white;
-}
-
-.banner3content {
-  width: 100%;
-  height: 100%;
-  border: solid red;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  font-weight: bolder;  
-  font-size: 25px;
+  /* background-color: green; */
 }
 
-.fotosContent{
-  width: 20%;
+.content3{
+  width: 100%;
   height: 100%;
-  border: solid blue;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
+  /* border: solid red; */
+  /* transform: scaleY(-1); */
   font-weight: bolder;  
   font-size: 25px;
+  background-image: url(../assets/imagens/fundoCarta.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
+
+
+/* .cphImg{
+
+} */
