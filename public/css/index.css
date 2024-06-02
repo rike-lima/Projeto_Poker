@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Ethno';
+  src: url(./Fontes/ethnocentric\ rg\ it.otf) format(opentype); 
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,13 +10,16 @@
   max-width: 100%;
 }
 
-body{
-  background-size: 100%;
-  /* overflow-x: hidden; */
+body {
+  width: 900vh;
+  height: 100%;
+  background: radial-gradient(#4e5c72,#343741,#0d0e0f);
+
 }
 
 #topMenu {
   width: 100%;
+  height: 10vh;
   padding: 0px;
   position: fixed;
   top: 0;
@@ -23,7 +31,8 @@ body{
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  margin: auto;
+  height: 100%;
+  margin: 0;
 }
 
 #topMenu .menuContent.active {
@@ -31,30 +40,60 @@ body{
   box-shadow: 0 2px 8px 0 black;
 }
 
-#topMenu .menuContent img {
-  width: 120px;
-  height: 100px;
-  margin-top: 15px;
-}
 
-#topMenu ul {
-  list-style: none;
+#topMenu .navBar {
+  font-weight: bolder;
+  color: #e86816;
+  font-size: 30px;
+  text-decoration: none;
+  /* transition: all 0.7s ease; */
 }
 
 #topMenu a {
   font-weight: bolder;
-  color: white;
-  font-size: 15px;
-  text-decoration: none;
-  transition: all 0.7s ease;
-}
-#topMenu a:hover {
   color: #e86816;
-  font-size: 25px;
-  
+  font-size: 30px;
+  text-decoration: none;
+  /* transition: all 0.7s ease; */
 }
-section {
+
+.navBar:hover {
+  cursor: pointer;
+}
+
+#menuHamburguer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  background: radial-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8));
+  background-image: url(../assets/imagens/fundoAses.png);
+  opacity: 0.9;
+  display: none;
   height: 90vh;
+  margin-top: 10vh;
+}
+
+#menuHamburguer img{
+  width: 500px;
+  margin: 0;
+  cursor: pointer;
+}
+
+menu ul {
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  ;
+}
+
+section {
+  height: 70vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -65,22 +104,15 @@ section {
   background-size: cover;
   background-attachment: fixed;
   max-width: 100%;
+  margin-top: 5vh;
 }
 
-.menuOptions {
-  width: 1000px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-}
-
-/* Banner com frase de impacto no poker  */
 .banner1 {
   height: 90vh;
   /* width: 100%; */
   background-image: url(../assets/imagens/banner1.png);
   background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -94,29 +126,49 @@ section {
   color: white;
   font-size: 30px;
 }
-
-/* parte da explicação do jogo, com link para página complementar, explicar no complemento como se joga */
-.sectionPoker {
-  background-image: url(../assets/imagens/fundoPokerSection.png);
-  background-repeat: no-repeat;
+.banner2 {
   display: flex;
   flex-direction: column;
-  justify-content: left;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center; 
   height: 70vh;
   width: 100%;
   gap: 50px;
   padding: 50px;
   padding-left: 50px;
-  background-size: cover;
 }
 
-.sectionPoker h2 {
+.banner h2 {
   color: white;
   text-align: center;
 }
 
 .contentPoker {
+  color: white;
+  font-size: 25px;
+  font-family: "Times New Roman", Times, serif;
+  width: 1000px;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: wavy;
+}
+
+.more {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #e86816;
+  width: 150px;
+  height: 40px;
+  border-radius: 10px;
+  color: white;
+}
+
+.contentPoker {   
   color: white;
   font-size: 25px;
   font-family: "Times New Roman", Times, serif;
@@ -141,34 +193,56 @@ section {
   height: 40px;
   border-radius: 10px;
   color: white;
+  margin-bottom: 50px;
 }
 
-/* Banner 2 vai tratar de algumas hasbilidades trabalhdas com o poker */
-.banner2 {
-  background-image: url(../assets/imagens/fundoHabilidades.png);
+.banner3 {
+  background-image: url(../assets/imagens/fundoPokerSection.png);
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: flex-start;
+  height: 70vh;
+  width: 100%;
+  gap: 50px;
+  padding: 50px;
+  padding-left: 50px;
   background-size: cover;
-  background-color: rgb(85, 85, 85);
-  background-blend-mode: overlay; 
-  height: 80vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  justify-content: space-around;
 }
-
-.titulos {
+ 
+.banner3content {
+  color: white;
+  font-size: 25px;
+  font-family: "Times New Roman", Times, serif;
+  width: 1000px;
+  height: 800px;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 10%;
-  margin-top: 10px;
   justify-content: center;
   align-items: center;
-  color: white;
+  text-decoration: wavy;
 }
 
-.banner2content {
+.banner4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 70vh;
+  width: 100%;
+  padding: 50px;
+
+  
+}
+
+.banner4 h2 {
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.banner4content {
   height: 100%;
   width: 100%;
   margin-top: 10px;
@@ -178,16 +252,13 @@ section {
   justify-content: space-around;
   
 }
-
-
-
+  
 .habilidade{
   width: 20%;
   height: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* border: solid red; */
   gap: 15px;
   font-size: 25px;
 }
@@ -199,109 +270,71 @@ section {
   margin-bottom: -50px;  
 }
 
-.eventos {
-  background-image: url(../assets/imagens/fundoEventos.png);
-  background-repeat: no-repeat;
+.banner5 {
+  background-image: url(../assets/imagens/fundoAses.png);
   background-size: cover;
-  background-attachment: fixed;
-  width: 100%;
-  height: 85vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  text-align: start;
-  padding: 5px;
-  color: white;  
-}
-
-.slider{
-  margin: 0 auto;
-  width: 800px;
-  height: 400px;
-  overflow: hidden;
-}
-
-.slides img{
-  width: 800px;
-  height: 430px;
-}
-
-/* .slides{
-  width:800px;
-  height: 400px;
-  display: flex;
-} */
-
-.slides input{
-  display: none;
-}
-
-.slide{
-  width: 25%;
-  position: relative;
-
-}
-
-.manual-navigation{
-  position: absolute;
-  height: 100px;
-  width: 100px;
-  /* margin-top: -40px; */
-  display: flex;
-  justify-content: center;
-}
-.manual-btn{  
-  border: 2px solid #e86816;
-  padding: 5px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 1s;
-}
-
-.manual-btn:not(:last-child){
-  margin-right: 40px;
-}
-
-.manual-btn:hover{
-  background-color: black;
-}
-
-#radio1:checked~.first{
-  margin-left: 0;
-  }
-
-  #radio2:checked~.first{
-    margin-left: 50%;
-    }
-
-/* abaixo está em produção */
-
-.banner3 {
-  
-  height: 90vh;
-  color: white;
+  background-position: center;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
-  /* background-color: green; */
+  padding: 20px;
+}
+.banner5content {
+  color: white;
+  font-size: 25px;
+  font-family: "Times New Roman", Times, serif;
+  width: 1000px;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: wavy;
+  -webkit-text-stroke-width: 0.8px;
+  -webkit-text-stroke-color: black;
 }
 
-.content3{
+.banner6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center; 
+  height: 140vh;
+  width: 100%;
+  gap: 50px;
+  padding: 50px;
+  padding-left: 50px;
+}
+
+
+.banner6content {
+  color: white;
+  font-size: 25px;
+  font-family: "Times New Roman", Times, serif;
   width: 100%;
   height: 100%;
-  /* border: solid red; */
-  /* transform: scaleY(-1); */
-  font-weight: bolder;  
-  font-size: 25px;
-  background-image: url(../assets/imagens/fundoCarta.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: wavy;
+  border: solid red;
 }
 
+.bloco{
+  width: 100%;
+  height: 33%;
+  border: solid blue;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  justify-content:space-evenly;
+  align-items: center;
+}
 
-/* .cphImg{
-
-} */
+.atletismo{
+  width: 500px;
+  height: 350px;
+  float: right;
+}

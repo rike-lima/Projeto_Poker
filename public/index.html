@@ -4,31 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <title>HOME</title>
+    <title>Teste</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 
 <body>
+
+    <menu id="menuHamburguer">
+
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#poker">POKER</a></li>
+            <li><a href="#">COMO JOGAR</a></li>
+            <li><a href="#habilidade">HABILIDADES</a></li>
+            <li><a href="#">SOBRE MIM</a></li>
+            <li><img src="./assets/imagens/btnFechar.png" onclick="ativarMenu()"></li>
+        </ul>
+
+
+    </menu>
     <header id="topMenu">
 
         <div class="menuContent">
-            <a href="./teste.html"><img src="./assets/imagens/polvo_laranja.png"></a>
-            <nav>
-                <ul class="menuOptions">
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#pokerExplicacao">POKER</a></li>
-                    <li><a href="#habilidades">HABILIDADES</a></li>
-                    <li><a href="#habilidades">EVENTOS</a></li>
-                    <li><a href="#carta">CARTA</a></li>
-                    <li><a href="#">SOBRE MIM</a></li>
-                </ul>
-            </nav>
+            <div class="navBar" onclick="ativarMenu()"><span class="material-symbols-outlined"> menu</span> MENU</div>
 
-            <a href="login.html" class="more"> LOGIN</a>
+            <img src="./assets/imagens/poker_laranja.png" alt="">
 
+            <span class="navBar"><a href="login.html" class="btnLogin"> LOGIN</a></span>
         </div>
-
     </header>
 
     <main>
@@ -41,7 +46,7 @@
             </div>
         </section>
 
-        <section class="sectionPoker" id="pokerExplicacao">
+        <section class="banner2" id="poker">
             <h2> &#9827;POKER&#9827;</h2>
             <div class="contentPoker">
                 <span><b>
@@ -69,14 +74,23 @@
 
         </section>
 
-        <section id="habilidades" class="banner2">
+        <section class="banner3">
+            <div class="banner3content">
+                <span><b>“O poker é um jogo limpo e honesto. No longo prazo os vencedores sempre levarão a melhor.”
+                        <br><br>
 
-            <div class="titulos">
-                <h1><b>HABILIDADES</b></h1><br>
+                        Daniel "Kid Poker" Negreanu,<br> jogador 6x campeão do mundo.</b></span>
             </div>
+        </section>
+
+        <section class="banner4" id="habilidade">
+
+
+            <h1><b>HABILIDADES</b></h1><br>
+
 
             <!-- limitação do conteudo           -->
-            <div class="banner2content">
+            <div class="banner4content">
 
                 <!-- Primeira habilidade: -->
                 <div class="habilidade">
@@ -132,112 +146,44 @@
 
             </div>
 
+
         </section>
 
-        <section class="eventos">
+        <section class="banner5">
+            <div class="banner5content">
+                <span><b>"Existem 2.598.960 possibilidades de mãos no poker, porém você receberá somente uma. A beleza é
+                        que você não precisa da melhor pra vencer. " <br><br>
 
-            <div class="slider">
-                <div class="slides">
-                    <!-- Radio btn -->
-                    <input type="radio" name="radio-btn" id="radio1">
-                    <input type="radio" name="radio-btn" id="radio2">
-                    <input type="radio" name="radio-btn" id="radio3">
-                    <input type="radio" name="radio-btn" id="radio4">
-                    <input type="radio" name="radio-btn" id="radio5">
-
-                    <!-- imagens -->
-
-                    <div class="slide1">
-                        <img src="./assets/imagens/WSOP_Logo.jpg" alt="banner WSOP">
-
-                    </div>
-
-                    <div class="slide2">
-                        <img src="./assets/imagens/ept_logo.jpg" alt="banner EPT">
-
-                    </div>
-
-                    <div class="slide3">
-                        <img src="./assets/imagens/lapt_logo.jpg" alt="banner LAPT">
-
-                    </div>
-
-                    <div class="slide4">
-                        <img src="./assets/imagens/bsop_logo.png" alt="banner BSOP">
-
-                    </div>
-
-                    <div class="slide5">
-                        <img src="./assets/imagens/ksop_logo.jpg" alt="banner BSOP">
-
-                    </div>
-
-                    <!-- navigation auto -->
-                    <div class="navigation-auto">
-                        <div class="auto-btn1"></div>
-                        <div class="auto-btn2"></div>
-                        <div class="auto-btn3"></div>
-                        <div class="auto-btn4"></div>
-                        <div class="auto-btn5"></div>
-
-                    </div>
-
-
-
-                </div>
-
-                <div class="manual-navigation">
-                    <label for="radio1" class="manual-btn"></label>
-                    <label for="radio2" class="manual-btn"></label>
-                    <label for="radio3" class="manual-btn"></label>
-                    <label for="radio4" class="manual-btn"></label>
-                    <label for="radio5" class="manual-btn"></label>
-    
-                </div>
+                        Autor desconhecido.<br></b></span>
             </div>
-
-
-
-
-
         </section>
 
-        <section class="banner3" id="aboutMe">
-            <div class="content3">
-                <h1>Sobre mim</h1><br>
-                <div class="container3">
-
+        <section class="banner6" id="sobreMim">
+            <h2>Sobre Mim</h2>
+            <div class="banner6content">
+                <div class="bloco">
+                    <img  src="./assets/imagens/sobreMim.png">
+                    <p> Meu nome é Rodolfo, atualmente sou estudante de Análise e Desenvolvimento de Sistema(ADS) na São Paulo Tech School.
+                        Nesse meu projeto quero apresentar o 
+                    </p>
                 </div>
 
-                <div class="cphImg"><img src="./assets/imagens/CPH.png"></div>
+                <div class="bloco">
+                    <img src="./assets/imagens/CPH.png">
+                </div>
 
+                <div class="bloco">
 
-                <!-- <p>O poker é um jogo dinàmico, de altos e baixos, e ele me ensinou lições de vida poderosas, que carrego
-                    comigo até hoje. Se você souber e ousar conhecer mais da natureza desse esporte , ir atrás de
-                    conexões de qualidade, não vai se arrepender. Nesse meio você vai aprender que o esforço é pago a
-                    longo prazo, que a disciplina é uma forte aliada, que as emoções podem ser uma lâmina de dois gumes,
-                    que as derrotas são professores da vida para aqueles que estão dispostos a aprender, que a vitória é
-                    uma consequência da sua jornada e que o seu maior aliado e seu maior rival é você mesmo.</p><br>
-
-                </p><br>
-
-                <p>
-                    Se você deseja saber mais sobre o mundo do poker, quero te ajudar com esse site. Ele foi projetado
-                    para que você tenha acesso ao material básico, para que consiga treinar e se apoiar em algo que vai
-                    deixar a sua base de conhecimento cada vez mais sólida. E com esforco e foco, a variância pode ser
-                    batida, e seu gráfico vai subir. 
-                </p><br>
-
-                <p>Clique em login para ter acesso ao conteúdo.</p> -->
-
+                </div>
             </div>
         </section>
 
     </main>
+
 </body>
 
 </html>
 
-<script src="./js/teste.js"></script>
+<script src="./js/index.js"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>AOS.init();</script>
