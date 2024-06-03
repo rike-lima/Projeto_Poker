@@ -1,17 +1,136 @@
-*{
+@font-face {
+    font-family: 'Ethno';
+    src: url(./Fontes/ethnocentric\ rg\ it.otf) format(opentype); 
+}
+
+* {
     margin: 0;
     padding: 0;
-    
+    box-sizing: border-box;
+    max-width: 100%;
 }
 
-html, body{
-    background-color: black;
-    width: 100vw;
-    height: 100vh;
-}
-
-#container{
-    width: 90%;
+body {
+    width: 900vh;
     height: 100%;
+    background: radial-gradient(#4e5c72,#343741,#0d0e0f);
+
+}
+
+#topMenu {
+    width: 100%;
+    height: 10vh;
+    padding: 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#topMenu .menuContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+#topMenu .menuContent.active {
+    backdrop-filter: blur(4px);
+    box-shadow: 0 2px 8px 0 black;
+}
+
+
+#topMenu .navBar {
+    font-weight: bolder;
+    color: #e86816;
+    font-size: 30px;
+    text-decoration: none;
+    /* transition: all 0.7s ease; */
+}
+
+#topMenu a {
+    font-weight: bolder;
+    color: #e86816;
+    font-size: 30px;
+    text-decoration: none;
+    /* transition: all 0.7s ease; */
+}
+
+.navBar:hover {
+    cursor: pointer;
+}
+
+#menuHamburguer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    background: radial-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8));
+    background-image: url(../assets/imagens/fundoAses.png);
+    opacity: 0.9;
+    display: none;
+    height: 90vh;
+    margin-top: 10vh;
+}
+
+#menuHamburguer img{
+    width: 500px;
+    margin: 0;
+    cursor: pointer;
+}
+
+menu ul {
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    ;
+}
+
+section {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    margin-top: 10vh;
+    color: #e86816;
+}
+
+.titulo{
+    width: 100%;
+    height: 5%;
+    /* border: solid beige;  */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+.container{
+    height: 95%;
+    width: 100%;
+    /* border: solid green; */
+    display: flex;
+    flex-direction: row;
+}
+.kpi{
+    height: 100%;
+    width: 35%;
     border: solid blue;
+    position: relative;
+}
+.grafico {
+    height: 100%;
+    width: 65%;
+    border: solid red;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
