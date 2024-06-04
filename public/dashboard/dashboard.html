@@ -17,9 +17,8 @@
   <menu id="menuHamburguer" class="menu">
     <ul>
         <li><a href="#">HOME</a></li>
-        <li><a href="#">BANKROLL</a></li>
+        <li><a href="./conta.html">BANKROLL</a></li>
         <li><a href="#poker">COMO JOGAR</a></li>
-        <li><a href="#">PERFIL</a></li>
         <li><a href="#">TABELAS</a></li>
         <li><a href="#habilidade">SIMULADOR</a></li>
         <li><img src="../assets/imagens/btnFechar.png" onclick="ativarMenu()"></li>
@@ -32,9 +31,9 @@
 
         <a href="./dashboard.html"><img src="../assets/imagens/poker_laranja.png"></a>
 
-        <span class="navBar" onclick="limparSessao"> LOGOUT</span>
+        <span class="navBar" onclick="limparSessao()"> LOGOUT</span>
     </div>
-</header>
+  </header>
 
     <main>
         <section>
@@ -77,7 +76,7 @@ new Chart(ctx, {
     labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
     datasets: [{
       label: '# of Votes',
-      data: [12, 19, 3, 5, 2, 3],
+      data: [-100, 120, 3, 5, 2, 3],
       borderWidth: 1
     }]
   },
