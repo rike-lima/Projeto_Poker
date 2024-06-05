@@ -17,7 +17,7 @@
 
             <div><Span> NOME:</Span><br><input type="text" placeholder="nome" id="nome_input"></div>
             <div><Span> EMAIL:</Span><br><input type="text" placeholder="email" id="email_input"></div>
-            <div><Span> USUÁRIO:</Span><br><input type="text" placeholder="usuario" id="usuario_input"></div>
+            <div><Span> NICKNAME:</Span><br><input type="text" placeholder="usuario" id="nickname_input"></div>
             <div><Span> SENHA:</Span><br><input type="text" placeholder="senha" id="senha_input"></div>
             <div><Span> CONFIRMAR SENHA:</Span><br><input  type="text" placeholder="confirme senha" id="confirmacao_senha_input"></div>
             <button onclick="cadastrar()" >Cadastrar</button>
@@ -36,7 +36,7 @@
     // Agora vá para o método fetch logo abaixo
     var nomeVar = nome_input.value;
     var emailVar = email_input.value;
-    var usuarioVar = usuario_input.value
+    var nicknameVar = nickname_input.value
     var senhaVar = senha_input.value;
     var confirmacaoSenhaVar = confirmacao_senha_input.value;
     // if (
@@ -67,7 +67,7 @@
         // Agora vá para o arquivo routes/usuario.js
         nomeServer: nomeVar,
         emailServer: emailVar,
-        usuarioServer: usuarioVar,
+        nicknameServer: nicknameVar,
         senhaServer: senhaVar
       }),
     })

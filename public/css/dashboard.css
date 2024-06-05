@@ -140,14 +140,65 @@ section {
     height: 100%;
     width: 35%;
     border: solid blue;
-    position: relative;
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
 }
 .grafico {
     height: 100%;
     width: 65%;
     border: solid red;
-    position: relative;
+    /* position: relative; */
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+table{
+  margin-top: 30px;
+  font-size: 40px;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  
+} 
+table, th, td {
+  border-radius: 15px;  
+  border: 1px solid black;
+  background-color: #cc7f4f;
+  color: black;
+  padding: 10px;
+}
+
+
+.atualizacao{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 500px;
+  align-items: center;
+  margin-top: -50PX;
+  font-size: 30px;
+}
+
+.atualizacao h1{
+  margin-bottom: -50px;
+}
+
+.newInfo{
+  width: 310px;
+  height: 70px;
+  font-size: 50px;
+  margin-top: -50PX;
+}
+
+button{
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
 }

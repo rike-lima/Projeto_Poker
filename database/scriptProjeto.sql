@@ -1,33 +1,33 @@
+create  database projetoPoker;
+
 use projetoPoker;
 describe usuario;
 
-select*from usuario;
+create table usuario(
+idUsuario int primary key auto_increment,
+nome varchar(80),
+email varchar (50),
+nickname varchar (45),
+senha varchar(45),
+bankroll decimal (9,2) default 0,
+profit decimal (9,2) default 0);
 
-create table sites 
-(idSite int primary key auto_increment,
-nome varchar(45));
+create table registro(
+idRegistro int auto_increment,
+fkUsuario int, foreign key (fkUsuario) references usuario(idUsuario),
+primary key (idRegistro, fkUsuario),
+dia date,
+acao varchar(45) constraint chkAcao check(acao in ('investimento', 'saque')),
+valor decimal(9,2) default 0);
 
-create table conta( idConta int, fkUsuario int, foreign key (fkUsuario) references usuario(idUsuario), 
-fkSite int, foreign key (fkSite) references sites (idSite), nickname varchar(45),  primary key (idConta, fkUsuario, fkSite));
+select usuario.*, registro.valor from usuario left join registro on idUsuario=fkUsuario ;
 
-insert into sites(nome) values
-('Pokerstars'),
-('GGPoker'),
-('PartyPoker');
 
-create table bankroll (idBank int, fkConta int, primary key (idBank, fkConta), bankroll decimal(10,2) default 0
-);
 
-alter table bankroll add foreign key (fkConta) references conta(idConta);
+select bankroll as 'caixa_atual', profit as 'profit' from usuario where idUsuario=1;
 
-insert into conta values
-(1,1,1,'ikeda');
 
-insert	into bankroll values 
-(1,1,0);
 
-select bankroll from bankroll where fkConta = 1;
 
-update bankroll set bankroll = 150 where fkConta = 1;
 
-alter table usuario add column saldo decimal(10,2) default 0;
+

@@ -1,5 +1,3 @@
-const { link } = require("../../src/routes/usuarios");
-
 function entrar() {
     // aguardar();
 
@@ -33,11 +31,12 @@ function entrar() {
                 console.log(resposta);
 
                 resposta.json().then(json => {
+                    console.log("AQUI");
                     console.log(json);
                     console.log(JSON.stringify(json));
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
-                    sessionStorage.ID_USUARIO = json.id;
+                    sessionStorage.ID_USUARIO = json.idUsuario;
 
                     setTimeout(function () {
                         window.location = "./dashboard/dashboard.html";

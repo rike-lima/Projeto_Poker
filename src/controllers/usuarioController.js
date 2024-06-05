@@ -17,23 +17,17 @@ function autenticar(req, res) {
                     console.log(`Resultados: ${JSON.stringify(resultadoAutenticar)}`); // transforma JSON em String
 
                     if (resultadoAutenticar.length == 1) {
-                        console.log(resultadoAutenticar);
+                        console.log(resultadoAutenticar[0]);
 
-                        // aquarioModel.buscarAquariosPorEmpresa(resultadoAutenticar[0].empresaId)
                         //     .then((resultadoAquarios) => {
                         //         if (resultadoAquarios.length > 0) {
-                                    res.json({
-                                        // id: resultadoAutenticar[0].id,
-                                        nome: resultadoAutenticar[0].nome,
-                                        email: resultadoAutenticar[0].email,
-                                        usuario: resultadoAutenticar[0].usuario,
-                                        senha: resultadoAutenticar[0].senha,
-                                        // aquarios: resultadoAquarios
-                            });
-                            //     } else {
-                            //         res.status(204).json({ aquarios: [] });
-                            //     }
-                            // })
+                        res.json({
+                            idUsuario: resultadoAutenticar[0].idUsuario,
+                            nome: resultadoAutenticar[0].nome,
+                            email: resultadoAutenticar[0].email,
+                            nickname: resultadoAutenticar[0].nickname,
+                            senha: resultadoAutenticar[0].senha,
+                        });
                     } else if (resultadoAutenticar.length == 0) {
                         res.status(403).send("usuario e/ou senha inválido(s)");
                     } else {
@@ -55,7 +49,7 @@ function cadastrar(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
     var nome = req.body.nomeServer;
     var email = req.body.emailServer;
-    var usuario = req.body.usuarioServer;
+    var nickname = req.body.nicknameServer;
     var senha = req.body.senhaServer;
 
     // Faça as validações dos valores
@@ -63,14 +57,14 @@ function cadastrar(req, res) {
         res.status(400).send("Seu nome está undefined!");
     } else if (email == undefined) {
         res.status(400).send("Seu email está undefined!");
+    } else if (nickname == undefined) {
+        res.status(400).send("Seu usuário está undefined!");
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está undefined!");
-    } else if (usuario == undefined) {
-        res.status(400).send("Seu usuário está undefined!");
     } else {
 
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(nome, email, usuario, senha)
+        usuarioModel.cadastrar(nome, email, nickname, senha)
             .then(
                 function (resultado) {
                     res.json(resultado);

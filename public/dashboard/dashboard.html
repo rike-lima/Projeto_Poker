@@ -8,84 +8,96 @@
     <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-      <script src="../js/index.js"></script>
-      <script src="../js/sessao.js"></script>
-</head>
-
-<body>
+      <script src="../js/sessao.js"></script> 
+    </head>
+    
+    <body>
 
   <menu id="menuHamburguer" class="menu">
     <ul>
         <li><a href="#">HOME</a></li>
-        <li><a href="./conta.html">BANKROLL</a></li>
         <li><a href="#poker">COMO JOGAR</a></li>
         <li><a href="#">TABELAS</a></li>
         <li><a href="#habilidade">SIMULADOR</a></li>
         <li><img src="../assets/imagens/btnFechar.png" onclick="ativarMenu()"></li>
-    </ul>
-</menu>
-<header id="topMenu">
+      </ul>
+    </menu>
+    <header id="topMenu">
 
-    <div class="menuContent">
+      <div class="menuContent">
         <div class="navBar" onclick="ativarMenu()"><span class="material-symbols-outlined"> menu</span> MENU</div>
-
+        
         <a href="./dashboard.html"><img src="../assets/imagens/poker_laranja.png"></a>
-
+        
         <span class="navBar" onclick="limparSessao()"> LOGOUT</span>
     </div>
   </header>
+  
+  <main>
+    <section>
+      
+      <div class="titulo">
+        <h1>Bem vindo(a), <span id="b_usuario"></span>!</h1>
+      </div>
+      
+      <div class="container">
+        
+        <div class="kpi">
+          <div class="registros">
+            <table>
+              <tr>
+                <th>REGISTRO</th>
+                            <th>VALOR</th>
+                        </tr>
+                        <tr>
+                          <td>PROFIT</td>
+                          <td><span>$<span id="kpi_profit"></span></span></td>  
+                          
+                        </tr>
+                        <tr>
+                          <td>CAIXA ATUAL</td>
+                          <td><span>$<span id="kpi_caixa"></span></span></td>
+                          
+                        </tr>
+                        <tr>
+                            <td>INVESTIMENTO</td>
+                            <td><span>$</span></td>
+    
+                          </tr>
+                          <tr>
+                            <td>SAQUE</td>
+                            <td><span>$</span></td>
+    
+                        </tr>
+                    </table>
+                  </div>
 
-    <main>
-        <section>
+                  <div class="atualizacao">
+                    <h1>UPDATE  </h1>
+                  <div class="acoes">
+                  <div><input type="number" class="newInfo"></div><br>
+                  <button id="registro" class="btnRegistro">INVESTIR</button>
+                  <button id="registro" class="btnRegistro">REGISTRAR</button>
+                  <button id="registro" class="btnRegistro">SACAR</button>
+                </div>
+              </div>
 
-            <div class="titulo">
-                <h1>Bem vindo(a), <span id="b_usuario">usuário</span>!</h1>
             </div>
-
-            <div class="container">
-
-                <div class="kpi"></div>
                 <div class="grafico"><canvas id="myChart"></canvas></div>
 
             </div>
-
-
-        </section>
-    </main>
-
-</body>
-
-</html>
-
-<!-- <script>
-  function limparSessao() {
-    sessionStorage.clear();
-    window.location.href = "../index.html";
-  }
-</script> -->
+            
+            
+          </section>
+        </main>
+        
+      </body>
+      
+      </html>
+      
+     
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>AOS.init();</script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-    const ctx = document.getElementById('myChart');
-
-new Chart(ctx, {
-  type: 'line',
-  data: {
-    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-    datasets: [{
-      label: '# of Votes',
-      data: [-100, 120, 3, 5, 2, 3],
-      borderWidth: 1
-    }]
-  },
-  options: {
-    scales: {
-      y: {
-        beginAtZero: true
-      }
-    }
-  }
-});
-</script>
+<script src="../js/kpi.js"></script>
