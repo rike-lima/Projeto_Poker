@@ -2,100 +2,100 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dash</title>
-    <link rel="stylesheet" href="../css/dashboard.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-      <script src="../js/sessao.js"></script> 
-    </head>
-    
-    <body>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dash</title>
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <script src="../js/sessao.js"></script>
+</head>
+
+<body>
 
   <menu id="menuHamburguer" class="menu">
     <ul>
-        <li><a href="#">HOME</a></li>
-        <li><a href="#poker">COMO JOGAR</a></li>
-        <li><a href="#">TABELAS</a></li>
-        <li><a href="#habilidade">SIMULADOR</a></li>
-        <li><img src="../assets/imagens/btnFechar.png" onclick="ativarMenu()"></li>
-      </ul>
-    </menu>
-    <header id="topMenu">
+      <li><a href="#">HOME</a></li>
+      <li><a href="#poker">COMO JOGAR</a></li>
+      <li><a href="#">TABELAS</a></li>
+      <li><a href="#habilidade">SIMULADOR</a></li>
+      <li><img src="../assets/imagens/btnFechar.png" onclick="ativarMenu()"></li>
+    </ul>
+  </menu>
+  <header id="topMenu">
 
-      <div class="menuContent">
-        <div class="navBar" onclick="ativarMenu()"><span class="material-symbols-outlined"> menu</span> MENU</div>
-        
-        <a href="./dashboard.html"><img src="../assets/imagens/poker_laranja.png"></a>
-        
-        <span class="navBar" onclick="limparSessao()"> LOGOUT</span>
+    <div class="menuContent">
+      <div class="navBar" onclick="ativarMenu()"><span class="material-symbols-outlined"> menu</span> MENU</div>
+
+      <a href="./dashboard.html"><img src="../assets/imagens/poker_laranja.png"></a>
+
+      <span class="navBar" onclick="limparSessao()"> LOGOUT</span>
     </div>
   </header>
-  
+
   <main>
     <section>
-      
+
       <div class="titulo">
         <h1>Bem vindo(a), <span id="b_usuario"></span>!</h1>
       </div>
-      
+
       <div class="container">
-        
+
         <div class="kpi">
           <div class="registros">
             <table>
               <tr>
                 <th>REGISTRO</th>
-                            <th>VALOR</th>
-                        </tr>
-                        <tr>
-                          <td>PROFIT</td>
-                          <td><span>$<span id="kpi_profit"></span></span></td>  
-                          
-                        </tr>
-                        <tr>
-                          <td>CAIXA ATUAL</td>
-                          <td><span>$<span id="kpi_caixa"></span></span></td>
-                          
-                        </tr>
-                        <tr>
-                            <td>INVESTIMENTO</td>
-                            <td><span>$</span></td>
-    
-                          </tr>
-                          <tr>
-                            <td>SAQUE</td>
-                            <td><span>$</span></td>
-    
-                        </tr>
-                    </table>
-                  </div>
+                <th>VALOR</th>
+              </tr>
+              <tr>
+                <td>PROFIT</td>
+                <td><span>$<span id="kpi_profit"></span></span></td>
 
-                  <div class="atualizacao">
-                    <h1>UPDATE  </h1>
-                  <div class="acoes">
-                  <div><input type="number" class="newInfo"></div><br>
-                  <button id="registro" class="btnRegistro">INVESTIR</button>
-                  <button id="registro" class="btnRegistro">REGISTRAR</button>
-                  <button id="registro" class="btnRegistro">SACAR</button>
-                </div>
-              </div>
+              </tr>
+              <tr>
+                <td>CAIXA ATUAL</td>
+                <td><span>$<span id="kpi_caixa"></span></span></td>
 
+              </tr>
+              <tr>
+                <td>INVESTIMENTO</td>
+                <td><span>$<span id="kpi_investimento"></span></span></td>
+
+              </tr>
+              <tr>
+                <td>SAQUE</td>
+                <td><span>$<span id="kpi_saque"></span></span></td>
+
+              </tr>
+            </table>
+          </div>
+
+          <div class="atualizacao">
+            <h1>UPDATE </h1>
+            <div class="acoes">
+              <div><input type="number" class="newInfo" id="ipt_valor_inserido"></div><br>
+              <button id="registro" class="btnRegistro" onclick="enviarInvestimento()">INVESTIR</button>
+              <button id="registro" class="btnRegistro" onclick="atualizarCaixa()">REGISTRAR</button>
+              <button id="registro" class="btnRegistro" onclick="enviarSaque()">SACAR</button>
             </div>
-                <div class="grafico"><canvas id="myChart"></canvas></div>
+          </div>
 
-            </div>
-            
-            
-          </section>
-        </main>
-        
-      </body>
-      
-      </html>
-      
-     
+        </div>
+        <div class="grafico"><canvas id="myChart"></canvas></div>
+
+      </div>
+
+
+    </section>
+  </main>
+
+</body>
+
+</html>
+
+
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>AOS.init();</script>

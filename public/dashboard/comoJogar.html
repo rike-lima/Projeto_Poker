@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como jogar</title>
+    <link rel="stylesheet"
+    
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="../css/comoJogar.css">
+</head>
+
+<body>
+    <menu id="menuHamburguer" class="menu">
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#poker">COMO JOGAR</a></li>
+            <li><a href="#">TABELAS</a></li>
+            <li><a href="#habilidade">SIMULADOR</a></li>
+            <li><img src="../assets/imagens/btnFechar.png" onclick="ativarMenu()"></li>
+          </ul>
+        </menu>
+        <header id="topMenu">
+    
+          <div class="menuContent">
+            <div class="navBar" onclick="ativarMenu()"><span class="material-symbols-outlined"> menu</span> MENU</div>
+            
+            <a href="./dashboard.html"><img src="../assets/imagens/poker_laranja.png"></a>
+            
+            <span class="navBar" onclick="limparSessao()"> LOGOUT</span>
+        </div>
+      </header>
+
+      <div class="regras">
+        
+      </div>
+</body>
+</html>
+
+<script src="./js/index.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>AOS.init();</script>
