@@ -170,6 +170,43 @@ function registrar_atualizar_profit(req, res) {
     });
 }
 
+function inserirProfit(req,res){
+
+    var idUsuario = req.params.idUsuario;
+    var profitGrafico= req.body.profitGraficoServer
+
+    kpiModel.inserirProfit(idUsuario, profitGrafico).then(function (resultado) {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado);
+        } else {
+            res.status(204).send("Nenhum resultado encontrado!")
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro ao buscar as ultimas medidas.", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+
+function plotarGrafico(req,res){
+
+    var idUsuario = req.params.idUsuario;
+
+    const limite_linhas = 7;
+
+    kpiModel.plotarGrafico(idUsuario, limite_linhas).then(function (resultado) {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado);
+        } else {
+            res.status(204).send("Nenhum resultado encontrado!")
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro ao buscar as ultimas medidas.", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+
 
 module.exports = {
     buscarKpi,
@@ -180,5 +217,7 @@ module.exports = {
     sacar_atualizar_bankroll,
     sacar_atualizar_profit,
     registrar_caixa,
-    registrar_atualizar_profit
+    registrar_atualizar_profit,
+    inserirProfit,
+    plotarGrafico
 }

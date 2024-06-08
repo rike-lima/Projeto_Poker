@@ -69,8 +69,6 @@ function sacar_atualizar_profit(idUsuario, valor_inserido) {
 }
 
 
-
-
 //REGISTROS ABAIXO:
 function registrar_caixa(idUsuario, valor_inserido) {
     var instrucaoSql = `
@@ -102,6 +100,23 @@ function registrar_atualizar_profit(idUsuario) {
 
 }
 
+function inserirProfit(idUsuario, profitGrafico){
+
+    var instrucaoSql =`insert into historico(fkUsuario,dia, valor) values 
+    (${idUsuario}, now(), ${profitGrafico} )`
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
+
+function plotarGrafico(idUsuario, limite_linhas){
+
+    var instrucaoSql =`select dia,valor from historico where fkUsuario=${idUsuario} order by idHistorico desc limit ${limite_linhas};`
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
 
 module.exports = {
     buscarKpi,
@@ -112,5 +127,7 @@ module.exports = {
     sacar_atualizar_bankroll,
     sacar_atualizar_profit,
     registrar_caixa,
-    registrar_atualizar_profit
+    registrar_atualizar_profit,
+    inserirProfit,
+    plotarGrafico
 }

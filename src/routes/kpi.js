@@ -39,4 +39,13 @@ router.put("/registrar_atualizar_profit/:idUsuario", function (req, res) {
     kpiController.registrar_atualizar_profit(req, res);
 });
 
+router.post("/inserirProfit/:idUsuario", function (req, res) {
+    kpiController.inserirProfit(req, res);
+});
+
+router.get("/plotarGrafico/:idUsuario", function (req, res) {
+    kpiController.plotarGrafico(req, res);
+});
+
+
 module.exports = router;
