@@ -112,7 +112,7 @@ function inserirProfit(idUsuario, profitGrafico){
 
 function plotarGrafico(idUsuario, limite_linhas){
 
-    var instrucaoSql =`select dia,valor from historico where fkUsuario=${idUsuario} order by idHistorico desc limit ${limite_linhas};`
+    var instrucaoSql =`select dia,valor from historico where fkUsuario=${idUsuario} order by dia desc limit ${limite_linhas};`
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);

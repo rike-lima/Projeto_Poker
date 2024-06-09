@@ -445,9 +445,9 @@ function atualizarCaixa() {
 function criarGrafico() {
   const ctx = document.getElementById('myChart');
 
-  if (Chart.getChart(ctx)) {
-    Chart.getChart(ctx).destroy();
-  }
+  // if (Chart.getChart(ctx)) {
+  //   Chart.getChart(ctx).destroy();
+  // }
 
   new Chart(ctx, {
     type: 'line',
