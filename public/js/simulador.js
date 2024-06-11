@@ -1,8 +1,8 @@
-var carta1 = [];
-var naipe1 = [];
-var carta2 = [];
-var naipe2 = [];
-var position = [];
+var carta1 = [7, 8, 9, 1, 2];
+var naipe1 = ["&#9824;", "&#9824;", "&#9824;", "&#9824;", "&#9824;"];
+var carta2 = [7, 8, 9, 1, 2];
+var naipe2 = ["&#9824;", "&#9824;", "&#9824;", "&#9824;", "&#9824;"];
+var position = ["UTG", "UTG", "UTG", "UTG", "UTG"];
 var resumoCombo = [];
 
 var maos_maximas = 0;
@@ -20,7 +20,7 @@ function ativarMenu() {
 function simular() {
   // simulador.style.display=none
 
-  var maos_maximas = Number(ipt_config_maos.value);
+  maos_maximas = Number(ipt_config_maos.value);
   var numero_telas = Number(ipt_config_telas.value);
 
   if (numero_telas == 0 || maos_maximas == 0) {
@@ -32,7 +32,7 @@ function simular() {
       divTreinoUmaTela.style.display = "flex";
     }
 
-    gerarMao();
+    // gerarMao();
   }
 }
 function gerarMao() {
@@ -137,32 +137,45 @@ function gerarMao() {
     position.push("SB");
   }
 
-  //   for (let i = 0; i < maos_maximas; i++) {
-  //     var posicaoAtual = position[i];
-  //     var cartaAtualUm = carta1[i];
-  //     var cartaAtualDois = carta2[i];
-  //     var naipeAtualUm = naipe1[i];
-  //     var naipeAtualDois = naipe2[i];
+  console.log("maos_maximas", maos_maximas);
+  console.log("position", position)
 
-  //     id_posicaoJogador.innerHTML = posicaoAtual;
-  //     id_carta1.innerHTML = cartaAtualUm;
-  //     id_carta2.innerHTML = cartaAtualDois;
-  //     id_naipe1.innerHTML = naipeAtualUm;
-  //     id_naipe2.innerHTML = naipeAtualDois;
-  //     
-  //   }
+  for (let i = 0; i < maos_maximas; i++) {
+    var posicaoAtual = position[i];
+    var cartaAtualUm = carta1[i];
+    var cartaAtualDois = carta2[i];
+    var naipeAtualUm = naipe1[i];
+    var naipeAtualDois = naipe2[i];
 
-  id_posicaoJogador.innerHTML = position[0];
-  id_carta1.innerHTML = carta1[0];
-  id_carta2.innerHTML = carta2[0];
-  id_naipe1.innerHTML = naipe1[0];
-  id_naipe2.innerHTML = naipe2[0];
-  contadorRodada.innerHTML= 1
+    console.log("posicaoAtual", posicaoAtual)
+    console.log("cartaAtualUm", cartaAtualUm)
+    console.log("cartaAtualDois", cartaAtualDois)
+    console.log("naipeAtualUm", naipeAtualUm)
+    console.log("naipeAtualDois", naipeAtualDois)
+
+    id_posicaoJogador.innerHTML = posicaoAtual;
+    id_carta1.innerHTML = cartaAtualUm;
+    id_carta2.innerHTML = cartaAtualDois;
+    id_naipe1.innerHTML = naipeAtualUm;
+    id_naipe2.innerHTML = naipeAtualDois;
+    contadorRodada.innerHTML = i;
+
+  }
+
+
+  // GERANDO AS CARTAS
+  // id_posicaoJogador.innerHTML = position[0];
+  // id_carta1.innerHTML = carta1[0];
+  // id_carta2.innerHTML = carta2[0];
+  // id_naipe1.innerHTML = naipe1[0];
+  // id_naipe2.innerHTML = naipe2[0];
+  // contadorRodada.innerHTML= 1
+
 }
 
 // var correcao = [
 //   {
 //     'posicao': 'utg',
-//     'maos': 'ATo'
+//     'maos':'ATo', 'AJo','AQo','AKo','AA','KK','QQ','JJ','TT',99,88,'AKs','AQs','AJs','ATs','A9s','A8s', 'A7s','A6s','A5s','A4s', 'A3s','A2s','KQs','KJs', 'KTs','QJs','JTs','T9s',
 //   },
 // ];
