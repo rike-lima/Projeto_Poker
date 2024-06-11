@@ -1,42 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Como jogar</title>
-    <link rel="stylesheet"
-    
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="../css/comoJogar.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Como jogar</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="../css/comoJogar.css">
 </head>
 
 <body>
-    <menu id="menuHamburguer" class="menu">
-        <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#poker">COMO JOGAR</a></li>
-            <li><a href="#">TABELAS</a></li>
-            <li><a href="#habilidade">SIMULADOR</a></li>
-            <li><img src="../assets/imagens/btnFechar.png" onclick="ativarMenu()"></li>
-          </ul>
-        </menu>
-        <header id="topMenu">
-    
-          <div class="menuContent">
-            <div class="navBar" onclick="ativarMenu()"><span class="material-symbols-outlined"> menu</span> MENU</div>
-            
-            <a href="./dashboard.html"><img src="../assets/imagens/poker_laranja.png"></a>
-            
-            <span class="navBar" onclick="limparSessao()"> LOGOUT</span>
-        </div>
-      </header>
+  <menu id="menuHamburguer" class="menu">
+    <ul>
+      <li><a href="./dashboard.html">HOME</a></li>
+      <li><a href="./comoJogar.html">COMO JOGAR</a></li>
+      <li><a href="#">TABELAS</a></li>
+      <li><a href="./simulador.html">SIMULADOR</a></li>
+      <li><a href="./quiz.html">QUIZ</a></li>
 
-      <div class="regras">
-        
+      <li><img src="../assets/imagens/btnFechar.png" onclick="ativarMenu()"></li>
+    </ul>
+  </menu>
+  <header id="topMenu">
+
+    <div class="menuContent">
+      <div class="navBar" onclick="ativarMenu()"><span class="material-symbols-outlined"> menu</span> MENU</div>
+
+      <a href="./dashboard.html"><img src="../assets/imagens/poker_laranja.png"></a>
+
+      <span class="navBar" onclick="limparSessao()"> LOGOUT</span>
+    </div>
+  </header>
+
+  <div class="regras">
+    <h2>COMO JOGAR POKER- TEXAS NO LIMIT HOLD'EM </h2>
+    <div class="divisao">
+      <p>
+        Para começar a disputar jogos de Texas Hold'em, é importante entender as regras básicas: <br><br>
+      <ul>
+        <li>Cada jogador recebe duas cartas que só ele verá (conhecidas como “cartas próprias”); </li>
+        <li>O dealer distribui cinco cartas (cartas comunitárias) - três de uma vez, depois outra, depois mais outra -
+          essas podem ser usadas por todos os jogadores para fazer a melhor mão possível de cinco cartas; </li>
+        <li>Antes e depois de cada carta ser revelada, os jogadores se revezam para apostar. Para permanecer na mão e
+          ver a próxima carta, todos os jogadores devem ter colocado a mesma quantidade de fichas no pote (a menos que
+          um jogador já esteja em all-in); </li>
+        <li>A melhor mão de poker ganha o pote. Um jogador pode utilizar qualquer combinação de sete cartas disponível
+          para fazer a melhor mão de poker possível de cinco cartas, utilizando nenhuma, uma ou duas de suas cartas
+          próprias. </li>
+      </ul>
+      </p>
+    </div>
+
+    <div class="divisao">
+      <h3>Os Blinds</h3>
+      <p>No Hold’em, um marcador chamado ‘o botão’ ou ‘o botão do dealer’ indica qual jogador é o dealer no jogo atual.
+        Antes da mão começar, o jogador imediatamente a esquerda do botão coloca o ‘small blind’, a primeira aposta
+        obrigatória. O jogador imediatamente a esquerda do small blind coloca o 'big blind', que geralmente é duas vezes
+        o tamanho do small blind (os blinds podem variar dependendo dos valores e da estrutura de apostas em jogo). </p>
+      <br>
+      <p>Nos jogos Limit, cada big blind corresponde a aposta menor, e o small blind é geralmente metade do tamanho do
+        big blind (mas pode ser maior dependendo do limite). Por exemplo, em um jogo Limit $2/$4, o small blind é US$ 1
+        e o big blind é US$ 2. Em um jogo Limit $15/$30, o small blind é US$ 10 e o big blind é US$ 15. </p><br>
+      <p>Nos jogos Pot Limit e No Limit, os jogos são denominados pelo tamanho dos blinds (por exemplo, um jogo $1/$2 de
+        Hold'em tem o smal blind de US$ 1 e o big blind de US$ 2). </p><br>
+      <p>Dependendo da estrutura do jogo, cada jogador também pode ter que colocar um ‘ante’ (outro tipo de aposta
+        forçada, geralmente menor que os blinds, colocada por todos os jogadores da mesa) no pote. </p><br>
+      <p>Agora, cada jogador recebe suas duas cartas próprias. A ação acontece no sentido horário na mesa, começando com
+        o jogador 'under the gun' (imediatamente a esquerda do big blind). </p>
+    </div>
+
+    <div class="divisao">
+      <h3>Opções de Apostas do Jogador </h3>
+      <p>No Hold'em, assim como em muitos formatos de poker, as ações disponíveis são fold (desistir), check (passar),
+        bet (apostar), call (pagar) ou raise(aumentar), as opções disponíveis dependem da ação tomada pelos jogadores
+        anteriores. Se ninguém fez uma aposta, o jogador pode passar (deixar de apostar, mas manter suas cartas) ou
+        apostar. Se um jogador apostou, os jogadores subsequentes podem desistir, pagar ou aumentar. Pagar é igualar o
+        valor que o jogador anterior apostou. Aumentar significa não só igualar a aposta anterior, mas também
+        aumentá-la. </p>
+    </div>
+
+    <div class="divisao">
+      <h3>Pré-flop</h3>
+      <p>Depois de ver suas cartas próprias, cada jogador agora tem a opção de jogar sua mão pagando ou aumentando o big
+        blind. A ação começa à esquerda do big blind, que é considerada uma aposta 'ativa' nessa rodada. Esse jogador
+        tem a opção de desistir, pagar ou aumentar. Por exemplo, se o big blind for US$ 2, o custo para pagar é de US$
+        2, ou pelo menos US$ 4 para aumentar. A ação prossegue no sentido horário da mesa. </p><br>
+      <p>Observação: A estrutura de apostas varia de acordo com as diferentes variações do jogo. Explicações sobre as
+        apostas no Limit Hold'em, No Limit Hold'em e Pot Limit Hold'em podem ser encontradas abaixo. </p><br>
+      <p>As apostas continuam em cada rodada de apostas até que todos os jogadores ativos (que não desistiram) tenham
+        colocado apostas iguais no pote. </p><br>
+
+      <div class="imagemExplicativa">
+        <img src="../assets/imagens/preFlop.png" alt="exemplo de Pré-flop">
       </div>
+    </div>
+
+    <div class="divisao">
+      <h3>Flop</h3>
+      <p>
+        Agora, três cartas são distribuídas abertas no bordo. Isso é conhecido como 'flop'. No Hold'em, as três cartas
+        no flop são cartas comunitárias, disponíveis para todos os jogadores ainda na mão. As apostas no flop começam
+        com o jogador ativo imediatamente à esquerda do botão. As opções de aposta são similares às do pré-flop, no
+        entanto se não houver apostas anteriores, os jogadores podem passar a ação para o próximo jogador ativo no
+        sentido horário.
+      </p><br>
+
+      <div class="imagemExplicativa">
+        <img src="../assets/imagens/imgFlop.png" alt="exemplo de Flop">
+      </div>
+    </div>
+
+    <div class="divisao">
+      <h3>Turn</h3>
+
+      <p>
+        Quando as apostas estiverem encerradas no flop, o 'turn' é virado aberto no bordo. O turn é a quarta carta
+        comunitária no Hold'em (e às vezes também chamada de ‘Fourth Street’). Outra rodada de apostas se inicia,
+        começando com o jogador ativo imediatamente a esquerda do botão.
+      </p> <br>
+
+      <div class="imagemExplicativa">
+        <img src="../assets/imagens/imgTurn.png" alt="exemplo de Flop">
+      </div>
+    </div>
+
+    <div class="divisao">
+      <h3>River</h3>
+      <p>
+        Quando as apostas estiverem concluídas no turn, o 'river' ou ‘Fifth Street’ é distribuído aberto no bordo. O
+        river é a quinta e última carta comunitária em um jogo de Hold'em. As apostas novamente começam com o jogador
+        ativo imediatamente à esquerda do botão no sentido horário, e as mesmas regras de apostas do flop e turn se
+        aplicam.
+      </p><br>
+      <div class="imagemExplicativa">
+        <img src="../assets/imagens/imgRiver.png" alt="exemplo de Flop">
+      </div>
+    </div>
+
+      <div class="divisao">
+        <h3>Showdown</h3>
+        <p>
+          Se existir mais do que um jogador restando quando a rodada final de apostas estiver completa, a última pessoa
+          a apostar ou aumentar mostra suas cartas, a menos que não existam apostas na rodada final. Nesse caso, o
+          jogador imediatamente a esquerda do botão mostra suas cartas primeiro. O jogador com a melhor mão de poker de
+          cinco cartas ganha o pote. No caso de mãos idênticas, o pote será igualmente dividido entre os jogadores com
+          as melhores mãos. As regras do Hold'em dizem que todos os naipes são iguais.
+        </p><br>
+        <p>Depois do pote ser concedido aos vencedores, uma nova mão de Hold'em está pronta para ser jogada. O botão
+          agora se move no sentido horário para outro jogador, os blinds e antes são novamente colocados, e novas mãos
+          são distribuídas para cada jogador.. </p><br>
+
+        <div class="imagemExplicativa">
+          <img src="../assets/imagens/imgShowdown.png" alt="exemplo de Flop">
+        </div>
+      </div>
+
+      <div class="divisao">
+        <h3>Recomendações</h3>
+        <p>Caso você tenha ficado curioso e queira saber e descobrir mais sobre o jogo, abaixo há uma lista de mterias
+          gratuitos que deixo como recomendação. Muito deles me ajudaram lá no inicio da carreira.</p><br>
+        <ul>
+          <li><a href="https://youtu.be/I6oTFP45gz8?si=gi-eXfi76EeO5sDl">Série</a></li>
+          <li><a href="https://pokerlab.com.br/aprender-a-jogar-poker/">Tutorial Poker Lab</a></li>
+          <li><a href="https://youtu.be/2LwozFLd9Uw?si=Qyvf-wdOa8tEX7DX">PokerStars Brasil</a></li>
+        </ul>
+      </div>
+
+    </div>
 </body>
+
 </html>
 
-<script src="./js/index.js"></script>
+<script src="../js/index.js"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>AOS.init();</script>

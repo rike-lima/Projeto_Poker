@@ -141,7 +141,7 @@ menu ul {
   align-items: center;
   background: radial-gradient(#4e5c72,#343741,#0d0e0f);
   position: relative;
-  border: solid red;
+  /* border: solid red; */
 }
 
 .mesaPoker {
