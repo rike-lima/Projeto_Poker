@@ -1,41 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador</title>
-    <link rel="stylesheet" href="../css/simulador.css">
-    <script src="../js/simulador.js"></script>
-    <link rel="stylesheet"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador</title>
+  <link rel="stylesheet" href="../css/simulador.css">
+  <script src="../js/simulador.js"></script>
+  <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
 </head>
+
 <body>
 
-    <menu id="menuHamburguer" class="menu">
-        <ul>
-          <li><a href="">HOME</a></li>
-          <li><a href="./comoJogar.html">COMO JOGAR</a></li>
-          <li><a href="">TABELAS</a></li>
-          <li><a href="">SIMULADOR</a></li>
-          <li><a href="./quiz.html">QUIZ</a></li>
-    
-          <li><img src="../assets/imagens/btnFechar.png" onclick="ativarMenu()"></li>
-        </ul>
-      </menu>
-      <header id="topMenu">
-    
-        <div class="menuContent">
-          <div class="navBar" onclick="ativarMenu()"><span class="material-symbols-outlined"> menu</span> MENU</div>
-    
-          <a href="./dashboard.html"><img src="../assets/imagens/poker_laranja.png"></a>
-    
-          <span class="navBar" onclick="limparSessao()"> LOGOUT</span>
-        </div>
-      </header>
-    
-    <div class="opcoesSimulador">
-        
+  <menu id="menuHamburguer" class="menu">
+    <ul>
+      <li><a href="">HOME</a></li>
+      <li><a href="./comoJogar.html">COMO JOGAR</a></li>
+      <li><a href="">TABELAS</a></li>
+      <li><a href="">SIMULADOR</a></li>
+      <li><a href="./quiz.html">QUIZ</a></li>
+
+      <li><img src="../assets/imagens/btnFechar.png" onclick="ativarMenu()"></li>
+    </ul>
+  </menu>
+  <header id="topMenu">
+
+    <div class="menuContent">
+      <div class="navBar" onclick="ativarMenu()"><span class="material-symbols-outlined"> menu</span> MENU</div>
+
+      <a href="./dashboard.html"><img src="../assets/imagens/poker_laranja.png"></a>
+
+      <span class="navBar" onclick="limparSessao()"> LOGOUT</span>
     </div>
+  </header>
+
+  <div class="container" id="divContainer">
+
+    <div id="simulador">
+      <h2 class="titulo">Como jogar:</h2><br><br>
+      <p>
+        O simulador foi desenvolvido com o propósito de ajudar o jogador a desenvolver sua base de jogo, masi
+        especificamete o Raise First In. Para acessá-lo escolha o numero de mçãos e de mesas que deseja simular e clique
+        em iniciar. <br><br>
+        Obs: Para um maior aproveitamento, sugiro que estude os ranges de RFI na aba de tabelas e depois aplique os seus
+        conhecimentos no simulador.
+      </p>
+    </div>
+    <div id="simulador">
+      <h2>Configurações:</h2><br><br>
+      <span>Mãos para rodar:</span><input type="number" class="configMaos" id="ipt_config_maos"><br><br>
+      <span>Telas simultaneas:</span> <input type="number" class="configTelas" id="ipt_config_telas"><br><br>
+      <button onclick="simular()">Iniciar</button>
+    </div>
+
+  </div>
+
+  <div class="treinoPoker" id="divTreinoUmaTela">
+
+    <div class="numeroRodada">
+      <span>#</span><span id="contadorRodada"></span>
+    </div>
+
+    <div class="mesaPoker">
+      <div class="posicaoMesa">
+        <span id="posicaoJogador">POS</span>
+      </div>
+
+      <div class="cards">
+        <div class="card"><span id="carta1">A</span> <span id="naipe1">♠</span></div>
+        <div class="card"><span id="carta2">A</span> <span id="naipe2">♦</span></div>
+
+      </div>
+    </div>
+
+    <div class="acoes">
+      <button>RAISE</button>
+      <button>FOLD</button>
+
+    </div>
+  </div>
+
+  </div>
 </body>
+
 </html>
+
+<script src="../js/simulador.js"></script>
