@@ -131,7 +131,7 @@ menu ul {
   cursor: pointer;
 }
 
-#divTreinoUmaTela{
+#divTreinoUmaTela {
   display: none;
   height: 90vh;
   margin-top: 10vh;
@@ -139,7 +139,7 @@ menu ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: radial-gradient(#4e5c72,#343741,#0d0e0f);
+  background: radial-gradient(#4e5c72, #343741, #0d0e0f);
   position: relative;
   /* border: solid red; */
 }
@@ -155,7 +155,7 @@ menu ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  }
+}
 
 
 .cards {
@@ -167,7 +167,7 @@ menu ul {
   gap: 5px;
 }
 
-.posicaoMesa{
+.posicaoMesa {
   height: 40%;
   width: 50%;
   font-size: 150px;
@@ -189,30 +189,30 @@ menu ul {
   font-weight: bold;
 }
 
-.acoes{
+.acoes {
   margin-top: 2%;
   display: flex;
   /* border: solid blue; */
   justify-content: space-around;
   width: 30%;
   height: 10%;
-  }
+}
 
-  .acoes button{
-    width: 40%;
-    height: 90%;
-    border-radius: 30px;
-    font-size: 150%;
-  }
+.acoes button {
+  width: 40%;
+  height: 90%;
+  border-radius: 30px;
+  font-size: 150%;
+}
 
-  .numeroRodada{
-    /* border: solid red; */
-    display: flex;
-    width: 15%;
-    height: 15%;
-    position: absolute;
-    left: 5%;
-    top: 5%;
-    color: #e86816;
-    font-size: 120px;
-    }
+.numeroRodada {
+  /* border: solid red; */
+  display: flex;
+  width: 15%;
+  height: 15%;
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  color: #e86816;
+  font-size: 120px;
+}

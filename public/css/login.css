@@ -32,8 +32,6 @@ background-size: contain;
 background-position: center;
 }
 
-
-
  .boxLogin{
      height: 70%;
      width:40%;
@@ -47,6 +45,7 @@ background-position: center;
     background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8));
     gap: 20px;
     padding-bottom: 30px;   
+    text-align: center;
 } 
 
 .boxLogin a{
@@ -60,10 +59,26 @@ background-position: center;
 }
 
 .boxLogin input{
-   width: 200px;
-   height: 30px;
+   width: 250px;
+   height: 40px;
+   color: white;
+background-color: transparent;
+border: solid  #e86816;
 }
 
+.boxLogin button{
+    width: 150px;
+   height: 40px;
+   font-size: 20px;
+   cursor: pointer;
+}
+
+.fundo {
+    font-size: 30px;
+}
+.titulo{
+    font-size: 50px;
+}
 /* .more{display: flex;
     flex-direction: column;
     justify-content: center;

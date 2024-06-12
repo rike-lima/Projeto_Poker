@@ -1,5 +1,8 @@
 // setInterval(criarGrafico, 5000);
 // função para menu menuHamburguer
+
+
+
 function ativarMenu() {
   var menuHamburguer = document.getElementById('menuHamburguer');
   if (menuHamburguer.style.display === 'none') {
@@ -37,8 +40,9 @@ var valor5 = 0
 var valor6 = 0
 var valor7 = 0
 
-pegarDados();
-function pegarDados() {
+var profit_global;
+
+function pegarDados2() {
   fetch(`/kpi/buscarKpi/${idUsuario}`, {
     method: "GET",
     headers: {
@@ -54,7 +58,7 @@ function pegarDados() {
 
         resposta.json().then((json) => {
           console.log(json);
-          kpiProfit.innerHTML = json[0].profit;
+          // kpiProfit.innerHTML = json[0].profit;
           profitGrafico = json[0].profit;
           kpiCaixa.innerHTML = json[0].caixa_atual;
           kpiInvestimento.innerHTML = json[0].investimento;
@@ -66,9 +70,10 @@ function pegarDados() {
           if (json[0].saque == null) {
             kpiSaque.innerHTML = '0.00'
           }
+          var conta_profit = Number(json[0].caixa_atual) + Number(json[0].saque) - Number(json[0].investimento);
+          kpiProfit.innerHTML = conta_profit;
+          profit_global = conta_profit;
 
-          inserirProfitBanco()
-          
         });
       } else {
         console.log("Erro busca pelo caixa");
@@ -83,14 +88,14 @@ function pegarDados() {
     });
 }
 
-function inserirProfitBanco() {
+function inserirProfitBanco2() {
   fetch(`/kpi/inserirProfit/${idUsuario}`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      profitGraficoServer: profitGrafico,
+      contaServer: profit_global,
     })
   })
     .then(function (resposta) {
@@ -99,6 +104,8 @@ function inserirProfitBanco() {
 
       if (resposta.ok) {
         console.log(resposta);
+
+        // pegarDados()
 
       } else {
         console.log("Erro na inserção");
@@ -111,7 +118,7 @@ function inserirProfitBanco() {
     .catch(function (erro) {
       console.log(erro);
     });
-    criarGrafico();
+  criarGrafico();
 
 }
 
@@ -408,7 +415,7 @@ function atualizarCaixa() {
   function atualizar_caixa_profit() {
 
     fetch(`/kpi/registrar_atualizar_profit/${idUsuario}`, {
-      method: "PUT",
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
@@ -468,6 +475,9 @@ function criarGrafico() {
     }
   });
 
-  
+
 }
 
+setInterval(() => {
+  pegarDados2()
+}, 2000);

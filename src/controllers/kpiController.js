@@ -156,8 +156,9 @@ function registrar_caixa(req, res) {
 function registrar_atualizar_profit(req, res) {
     
     var idUsuario = req.params.idUsuario;
+    var novo_valor=req.body.valorServer;
 
-    kpiModel.registrar_atualizar_profit(idUsuario).then(function (resultado) {
+    kpiModel.registrar_atualizar_profit(idUsuario, novo_valor).then(function (resultado) {
         if (resultado.length > 0) {
             res.status(200).json(resultado);
         } else {
@@ -173,9 +174,9 @@ function registrar_atualizar_profit(req, res) {
 function inserirProfit(req,res){
 
     var idUsuario = req.params.idUsuario;
-    var profitGrafico= req.body.profitGraficoServer
+    var profit = req.body.contaServer
 
-    kpiModel.inserirProfit(idUsuario, profitGrafico).then(function (resultado) {
+    kpiModel.inserirProfit(idUsuario, profit).then(function (resultado) {
         if (resultado.length > 0) {
             res.status(200).json(resultado);
         } else {

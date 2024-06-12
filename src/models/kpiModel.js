@@ -78,14 +78,14 @@ function registrar_caixa(idUsuario, valor_inserido) {
     return database.executar(instrucaoSql);
 }
 
-function registrar_atualizar_profit(idUsuario) {
+function registrar_atualizar_profit(idUsuario, novo_valor) {
     var instrucaoSql = `
     
     UPDATE usuario u
     JOIN (
     SELECT 
         u.idUsuario,
-        u.bankroll - SUM(r_investimento.valor) + SUM(r_saque.valor) AS novo_profit
+        ${novo_valor} - SUM(r_investimento.valor) + SUM(r_saque.valor) AS novo_profit
     FROM 
         usuario u
         LEFT JOIN registro as r_investimento ON u.idUsuario = r_investimento.fkUsuario AND r_investimento.acao = 'investimento'
@@ -100,10 +100,10 @@ function registrar_atualizar_profit(idUsuario) {
 
 }
 
-function inserirProfit(idUsuario, profitGrafico){
+function inserirProfit(idUsuario, profit){
 
     var instrucaoSql =`insert into historico(fkUsuario,dia, valor) values 
-    (${idUsuario}, now(), ${profitGrafico} )`
+    (${idUsuario}, now(), ${profit})`
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);

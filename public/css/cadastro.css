@@ -8,10 +8,9 @@
  body{
     width: 100%;
     height: 100%;
-    /* background: url("/imagens/planoFundolog.jpg"); */
-    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)), url("../assets/imagens/fundo_login.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)), url("../assets/imagens/fundo_login.jpg");
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -21,7 +20,8 @@
 
 .container {
 height: 100vh;
-width: 100VW;
+width: 100vw;
+/* border: solid red;    */
 background-size: 100%;
 display: flex;
 flex-direction: row;
@@ -32,30 +32,54 @@ background-size: contain;
 background-position: center;
 }
 
-
-
  .boxLogin{
-    display: flex;  
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 80%;
-    width:50%;
+     height: 70%;
+     width:40%;
+     display: flex;  
+     align-items: center;
+     justify-content: space-around;
+     flex-direction: column;
+     border-radius: 50px;
+     color: white;
+     font-size: 25px;
     background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8));
-    border-radius: 10px;
-    color: white;
-    font-size: 20px;
-    gap: 40px;
-   
+    gap: 20px;
+    padding-bottom: 30px;   
+    text-align: center;
 } 
 
-.boxLogin .icon{
-    font-size: 50px;
+.boxLogin a{
+    text-decoration: none;
 }
 
 
+.boxLogin .icon{
+    font-size: 80px;
+    text-decoration: none;
+}
 
-.more{display: flex;
+.boxLogin input{
+   width: 250px;
+   height: 40px;
+   color: white;
+background-color: transparent;
+border: solid  #e86816;
+}
+
+.boxLogin button{
+    width: 150px;
+   height: 40px;
+   font-size: 20px;
+   cursor: pointer;
+}
+
+.fundo {
+    font-size: 30px;
+}
+.titulo{
+    font-size: 50px;
+}
+/* .more{display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -64,9 +88,5 @@ background-position: center;
     height: 40px;
     border-radius: 10px;
     color: #d4ba9d;
-opacity: 1;
-}
+} */
 
-button{
-    cursor: pointer;
-}
